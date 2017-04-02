@@ -14,13 +14,5 @@ import (
 )
 
 func init() {
-	ns := beego.NewNamespace("/login",
-		beego.NSInclude(
-			&controllers.LoginController{},
-		),
-	)
-
-	beego.AddNamespace(ns)
-
 	beego.Router("/login", &controllers.LoginController{})
 }
